@@ -252,7 +252,7 @@ public class MainUser {
     }
     else
     {
-        JOptionPane.showMessageDialog(null,"Enter the valid SSN");
+        JOptionPane.showMessageDialog(null,"Enter the valid IP");
 
     }
     }
