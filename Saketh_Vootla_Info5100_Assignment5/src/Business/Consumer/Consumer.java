@@ -20,7 +20,7 @@ public class Consumer {
     public Consumer(UserAccount ua)
     {
         this.ua = ua;
-        this.consumerName = ua.getUserName();
+        this.consumerName = ua.getUsername();
     }
     
     ArrayList<Order> previousOrders = new ArrayList<Order>();

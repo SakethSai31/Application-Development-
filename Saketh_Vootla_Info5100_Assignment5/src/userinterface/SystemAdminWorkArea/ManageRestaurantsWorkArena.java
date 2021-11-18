@@ -57,8 +57,14 @@ public class ManageRestaurantsWorkArena extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         txtRestoUpdtPwd = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
+        bgdimg = new javax.swing.JLabel();
 
-        jLabel1.setText("Restaurant Directory");
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Viner Hand ITC", 3, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("RESTAURANT   LIST");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 47, 450, 30));
 
         restosTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -70,12 +76,15 @@ public class ManageRestaurantsWorkArena extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(restosTable);
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 95, -1, 103));
+
         jButton1.setText("Delete");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(186, 216, -1, -1));
 
         jButton2.setText("Home");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -83,16 +92,24 @@ public class ManageRestaurantsWorkArena extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 30, -1, -1));
 
         restoList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 restoListActionPerformed(evt);
             }
         });
+        add(restoList, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 440, 124, -1));
 
-        jLabel2.setText("Restaurant");
+        jLabel2.setFont(new java.awt.Font("Viner Hand ITC", 3, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("RESTAURANT");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 440, 130, -1));
 
-        jLabel3.setText("username");
+        jLabel3.setFont(new java.awt.Font("Viner Hand ITC", 3, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("USERNAME:");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 480, 130, -1));
 
         txtUnamePwd.setEditable(false);
         txtUnamePwd.addActionListener(new java.awt.event.ActionListener() {
@@ -100,8 +117,13 @@ public class ManageRestaurantsWorkArena extends javax.swing.JPanel {
                 txtUnamePwdActionPerformed(evt);
             }
         });
+        add(txtUnamePwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 480, 124, -1));
 
-        jLabel4.setText("password:");
+        jLabel4.setFont(new java.awt.Font("Viner Hand ITC", 3, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("PASSWORD:");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(423, 510, 110, -1));
+        add(txtRestoUpdtPwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 510, 124, -1));
 
         jButton3.setText("Update");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -109,68 +131,11 @@ public class ManageRestaurantsWorkArena extends javax.swing.JPanel {
                 jButton3ActionPerformed(evt);
             }
         });
+        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 560, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(58, 58, 58))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(186, 186, 186)
-                        .addComponent(jButton1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton3)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(restoList, 0, 124, Short.MAX_VALUE)
-                                .addComponent(txtUnamePwd)
-                                .addComponent(txtRestoUpdtPwd)))))
-                .addContainerGap(239, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addGap(57, 57, 57)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(restoList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtUnamePwd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(txtRestoUpdtPwd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(48, 48, 48)
-                .addComponent(jButton3)
-                .addContainerGap(55, Short.MAX_VALUE))
-        );
+        bgdimg.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        bgdimg.setIcon(new javax.swing.ImageIcon("D:\\Study\\Northeastern University\\INFO 5100_AED\\Assignments\\Assignment Images\\Assignment 5\\Restaurant_-2_822x606.jpg")); // NOI18N
+        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 0, 820, 610));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -225,6 +190,7 @@ public class ManageRestaurantsWorkArena extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel bgdimg;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;

@@ -32,7 +32,7 @@ public class DeliveryPersonDirectory {
     {
         for(DeliveryPerson d: deliveryDirectory)
         {
-            if(d.getdlyName().equals(ua.getUserName()))
+            if(d.getdlyName().equals(ua.getUsername()))
                 return d;
         }
         return null;

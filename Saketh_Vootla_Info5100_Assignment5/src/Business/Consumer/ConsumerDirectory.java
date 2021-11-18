@@ -27,7 +27,7 @@ public class ConsumerDirectory {
     {
         for(Consumer c: consumerList)
         {
-            if(ua.getUserName().equals(c.getUa().getUserName()))
+            if(ua.getUsername().equals(c.getUa().getUsername()))
                 return c;
         }
         

@@ -29,7 +29,7 @@ public class DeliveryPerson {
     public DeliveryPerson(UserAccount ua)
     {
         this.ua = ua;
-        this.dlyName = ua.getUserName();
+        this.dlyName = ua.getUsername();
     }
 
     public String getdlyName() {
