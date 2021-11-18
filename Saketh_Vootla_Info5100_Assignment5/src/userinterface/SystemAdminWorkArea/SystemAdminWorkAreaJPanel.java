@@ -59,7 +59,9 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         btnAddUser = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
 
-        setLayout(new java.awt.BorderLayout());
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnManageNetwork.setText("Manage All Customers");
         btnManageNetwork.addActionListener(new java.awt.event.ActionListener() {
@@ -67,6 +69,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageNetworkActionPerformed(evt);
             }
         });
+        jPanel2.add(btnManageNetwork, new org.netbeans.lib.awtextra.AbsoluteConstraints(91, 106, -1, -1));
 
         btnManageEnterprise.setText("Manage Restaurants");
         btnManageEnterprise.addActionListener(new java.awt.event.ActionListener() {
@@ -74,6 +77,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageEnterpriseActionPerformed(evt);
             }
         });
+        jPanel2.add(btnManageEnterprise, new org.netbeans.lib.awtextra.AbsoluteConstraints(91, 147, 141, -1));
 
         btnManageAdmin.setText("Manage Deliveryman");
         btnManageAdmin.addActionListener(new java.awt.event.ActionListener() {
@@ -81,42 +85,16 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnManageAdminActionPerformed(evt);
             }
         });
+        jPanel2.add(btnManageAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(91, 188, -1, -1));
 
+        btnAddUser.setIcon(new javax.swing.ImageIcon("D:\\Study\\Northeastern University\\INFO 5100_AED\\Assignments\\Assignment Images\\Assignment 5\\icons8-user-64.png")); // NOI18N
         btnAddUser.setText("Add New User");
         btnAddUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddUserActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(91, 91, 91)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(btnManageEnterprise, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnManageNetwork, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(btnAddUser, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnManageAdmin, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(403, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(92, 92, 92)
-                .addComponent(btnManageNetwork)
-                .addGap(18, 18, 18)
-                .addComponent(btnManageEnterprise)
-                .addGap(18, 18, 18)
-                .addComponent(btnManageAdmin)
-                .addGap(39, 39, 39)
-                .addComponent(btnAddUser)
-                .addContainerGap(144, Short.MAX_VALUE))
-        );
+        jPanel2.add(btnAddUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(91, 250, 200, 70));
 
         jSplitPane.setRightComponent(jPanel2);
 
@@ -128,12 +106,12 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 395, Short.MAX_VALUE)
+            .addGap(0, 602, Short.MAX_VALUE)
         );
 
         jSplitPane.setLeftComponent(jPanel1);
 
-        add(jSplitPane, java.awt.BorderLayout.CENTER);
+        add(jSplitPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddUserActionPerformed
@@ -145,7 +123,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnAddUserActionPerformed
 
     private void btnManageAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageAdminActionPerformed
-       ManageDeliveryManWorkArena md = new ManageDeliveryManWorkArena(userProcessContainer,ecosystem);
+        ManageDeliveryManWorkArena md = new ManageDeliveryManWorkArena(userProcessContainer,ecosystem);
         userProcessContainer.add("manageDelivery",md);
         CardLayout crdLyt = (CardLayout) userProcessContainer.getLayout();
         crdLyt.show(userProcessContainer,"manageDelivery");

@@ -33,9 +33,12 @@
                       <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
                           <Component id="manageMenu" linkSize="3" pref="150" max="32767" attributes="0"/>
-                          <Component id="userJButton" linkSize="3" alignment="1" pref="180" max="32767" attributes="0"/>
                           <Component id="btnManageOrders" linkSize="3" alignment="1" max="32767" attributes="0"/>
                       </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
+                      <Component id="userJButton" min="-2" pref="243" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="84" max="32767" attributes="0"/>
@@ -59,9 +62,9 @@
               <Component id="btnManageOrders" linkSize="4" min="-2" pref="50" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
               <Component id="manageMenu" linkSize="4" min="-2" pref="50" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               <Component id="userJButton" linkSize="4" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="115" max="32767" attributes="0"/>
+              <EmptySpace pref="119" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -91,7 +94,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Rockwell Condensed" size="20" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Manage menu"/>
+        <Property name="text" type="java.lang.String" value="Manage Menu"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="manageMenuActionPerformed"/>

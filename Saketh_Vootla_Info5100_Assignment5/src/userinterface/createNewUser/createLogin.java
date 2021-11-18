@@ -68,31 +68,53 @@ public class createLogin extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        lblusername = new javax.swing.JLabel();
+        lblPassword = new javax.swing.JLabel();
+        lblrole = new javax.swing.JLabel();
+        lblName = new javax.swing.JLabel();
+        lblConfirmPassword = new javax.swing.JLabel();
         txtName = new javax.swing.JTextField();
         txtUName = new javax.swing.JTextField();
         txtPasswd = new javax.swing.JTextField();
         txtCnfrmPwd = new javax.swing.JTextField();
         roleCmb = new javax.swing.JComboBox<>();
         btnCreateUser = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
+        lblTitle = new javax.swing.JLabel();
         btnHome = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
+        lblRestaurantName = new javax.swing.JLabel();
         txtRestaurantName = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
-        jLabel1.setText("Username:");
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setText("Password:");
+        lblusername.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        lblusername.setForeground(new java.awt.Color(255, 255, 255));
+        lblusername.setText("Username:");
+        add(lblusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 76, -1));
 
-        jLabel3.setText("Role:");
+        lblPassword.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        lblPassword.setForeground(new java.awt.Color(255, 255, 255));
+        lblPassword.setText("Password:");
+        add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 92, -1));
 
-        jLabel4.setText("Name:");
+        lblrole.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        lblrole.setForeground(new java.awt.Color(255, 255, 255));
+        lblrole.setText("Role:");
+        add(lblrole, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, -1, -1));
 
-        jLabel5.setText("Confirm Password:");
+        lblName.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        lblName.setForeground(new java.awt.Color(255, 255, 255));
+        lblName.setText("Name:");
+        add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, -1, -1));
+
+        lblConfirmPassword.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        lblConfirmPassword.setForeground(new java.awt.Color(255, 255, 255));
+        lblConfirmPassword.setText("Confirm Password:");
+        add(lblConfirmPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, -1, -1));
+        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, 103, -1));
+        add(txtUName, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 130, 103, -1));
+        add(txtPasswd, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, 103, -1));
+        add(txtCnfrmPwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 103, -1));
 
         roleCmb.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Restaurant Admin", "Customer", "Delivery Man" }));
         roleCmb.addActionListener(new java.awt.event.ActionListener() {
@@ -100,15 +122,20 @@ public class createLogin extends javax.swing.JPanel {
                 roleCmbActionPerformed(evt);
             }
         });
+        add(roleCmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, 129, -1));
 
-        btnCreateUser.setText("create");
+        btnCreateUser.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        btnCreateUser.setText("CREATE USER");
         btnCreateUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreateUserActionPerformed(evt);
             }
         });
+        add(btnCreateUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 380, 150, 40));
 
-        jLabel6.setText("Create new user");
+        lblTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblTitle.setText("Create New User");
+        add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 27, 199, 32));
 
         btnHome.setText("Back");
         btnHome.addActionListener(new java.awt.event.ActionListener() {
@@ -116,81 +143,19 @@ public class createLogin extends javax.swing.JPanel {
                 btnHomeActionPerformed(evt);
             }
         });
+        add(btnHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 13, 70, 30));
 
-        jLabel7.setText("Restaurant name:");
+        lblRestaurantName.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
+        lblRestaurantName.setForeground(new java.awt.Color(255, 255, 255));
+        lblRestaurantName.setText("Restaurant Name:");
+        add(lblRestaurantName, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, 110, -1));
 
         txtRestaurantName.setEditable(false);
+        add(txtRestaurantName, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 129, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(195, 195, 195)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
-                .addComponent(btnHome)
-                .addGap(51, 51, 51))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(181, 181, 181)
-                        .addComponent(btnCreateUser))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(81, 81, 81)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabel4)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(38, 38, 38)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtUName, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtPasswd, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtCnfrmPwd, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(roleCmb, 0, 129, Short.MAX_VALUE)
-                            .addComponent(txtRestaurantName))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(btnHome))
-                .addGap(49, 49, 49)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(txtUName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(txtPasswd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(txtCnfrmPwd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(roleCmb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(txtRestaurantName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
-                .addComponent(btnCreateUser)
-                .addContainerGap(91, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\Study\\Northeastern University\\INFO 5100_AED\\Assignments\\Assignment Images\\Assignment 5\\users3_add.png")); // NOI18N
+        jLabel1.setText("jLabel1");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 500));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCreateUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateUserActionPerformed
@@ -274,12 +239,13 @@ public class createLogin extends javax.swing.JPanel {
     private javax.swing.JButton btnCreateUser;
     private javax.swing.JButton btnHome;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel lblConfirmPassword;
+    private javax.swing.JLabel lblName;
+    private javax.swing.JLabel lblPassword;
+    private javax.swing.JLabel lblRestaurantName;
+    private javax.swing.JLabel lblTitle;
+    private javax.swing.JLabel lblrole;
+    private javax.swing.JLabel lblusername;
     private javax.swing.JComboBox<String> roleCmb;
     private javax.swing.JTextField txtCnfrmPwd;
     private javax.swing.JTextField txtName;

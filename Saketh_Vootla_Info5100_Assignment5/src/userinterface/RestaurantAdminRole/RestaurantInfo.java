@@ -50,8 +50,8 @@ public class RestaurantInfo extends javax.swing.JPanel {
         txtAddResto = new javax.swing.JTextField();
         txtCityResto = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnUpdate = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
 
         jLabel1.setText("Restaurant info");
 
@@ -78,17 +78,17 @@ public class RestaurantInfo extends javax.swing.JPanel {
 
         jLabel6.setText("City:");
 
-        jButton1.setText("Update");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnUpdate.setText("Update");
+        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnUpdateActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Back");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setText("Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
 
@@ -121,10 +121,10 @@ public class RestaurantInfo extends javax.swing.JPanel {
                                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
                                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 296, Short.MAX_VALUE)
-                                .addComponent(jButton2))))
+                                .addComponent(btnBack))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(68, 68, 68)
-                        .addComponent(jButton1)))
+                        .addComponent(btnUpdate)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -133,7 +133,7 @@ public class RestaurantInfo extends javax.swing.JPanel {
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jButton2))
+                    .addComponent(btnBack))
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -153,7 +153,7 @@ public class RestaurantInfo extends javax.swing.JPanel {
                     .addComponent(txtCityResto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(btnUpdate)
                 .addContainerGap(117, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -166,23 +166,23 @@ public class RestaurantInfo extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtAddRestoActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
         // TODO add your handling code here:
         resto.setCity(txtCityResto.getText());
         resto.setAddress(txtAddResto.getText());
         populateData();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnUpdateActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         CardLayout crdLyt = (CardLayout) userProcessContainer.getLayout();
             crdLyt.show(userProcessContainer,"RestaurantAdmin");
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnUpdate;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

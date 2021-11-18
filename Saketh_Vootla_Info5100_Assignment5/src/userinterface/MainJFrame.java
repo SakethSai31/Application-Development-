@@ -9,8 +9,6 @@ import Business.EcoSystem;
 import Business.DB4OUtil.DB4OUtil;
 import Business.DeliveryMan.DeliveryManDirectory;
 
-import Business.Organization;
-import Business.Restaurant.Restaurant;
 import Business.Restaurant.RestaurantDirectory;
 import Business.UserAccount.UserAccount;
 import Business.UserAccount.UserAccountDirectory;
@@ -18,9 +16,7 @@ import java.awt.CardLayout;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import userinterface.CustomerRole.CustomerAreaJPanel;
 import userinterface.CustomerRole.CustomerRestaurantOrder;
-import userinterface.DeliveryManRole.DeliveryManWorkAreaJPanel;
 import userinterface.DeliveryManRole.OrdersDelivery;
 import userinterface.RestaurantAdminRole.AdminWorkAreaJPanel;
 import userinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel;
@@ -61,33 +57,33 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jSplitPane1 = new javax.swing.JSplitPane();
         jPanel1 = new javax.swing.JPanel();
-        loginJButton = new javax.swing.JButton();
+        btnLogin = new javax.swing.JButton();
         userNameJTextField = new javax.swing.JTextField();
         passwordField = new javax.swing.JPasswordField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lblUserName = new javax.swing.JLabel();
+        lblPassword = new javax.swing.JLabel();
         loginJLabel = new javax.swing.JLabel();
-        logoutJButton = new javax.swing.JButton();
+        btnLogout = new javax.swing.JButton();
         container = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        loginJButton.setText("Login");
-        loginJButton.addActionListener(new java.awt.event.ActionListener() {
+        btnLogin.setText("Login");
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginJButtonActionPerformed(evt);
+                btnLoginActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("User Name");
+        lblUserName.setText("User Name");
 
-        jLabel2.setText("Password");
+        lblPassword.setText("Password");
 
-        logoutJButton.setText("Logout");
-        logoutJButton.setEnabled(false);
-        logoutJButton.addActionListener(new java.awt.event.ActionListener() {
+        btnLogout.setText("Logout");
+        btnLogout.setEnabled(false);
+        btnLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                logoutJButtonActionPerformed(evt);
+                btnLogoutActionPerformed(evt);
             }
         });
 
@@ -99,36 +95,41 @@ public class MainJFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(passwordField, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(passwordField)
+                        .addComponent(lblUserName, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(lblPassword, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(userNameJTextField, javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                            .addComponent(logoutJButton, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
-                            .addGap(26, 26, 26)
+                            .addGap(136, 136, 136)
                             .addComponent(loginJLabel)))
-                    .addComponent(loginJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLogout, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnLogin, btnLogout});
+
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(userNameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(67, 67, 67)
+                .addComponent(lblUserName)
                 .addGap(18, 18, 18)
-                .addComponent(loginJButton)
-                .addGap(34, 34, 34)
-                .addComponent(logoutJButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(userNameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lblPassword)
+                .addGap(18, 18, 18)
+                .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
                 .addComponent(loginJLabel)
-                .addContainerGap(187, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
+                .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60)
+                .addComponent(btnLogout)
+                .addContainerGap(166, Short.MAX_VALUE))
         );
+
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnLogin, btnLogout});
 
         jSplitPane1.setLeftComponent(jPanel1);
 
@@ -140,7 +141,7 @@ public class MainJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void loginJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginJButtonActionPerformed
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // Get user name
         String username = userNameJTextField.getText();
         String password = passwordField.getText();
@@ -152,10 +153,10 @@ public class MainJFrame extends javax.swing.JFrame {
         this.ua = userDirectory.authenticateUser(username, password);
         if(ua.getRole().toString().equals("Business.Role.SystemAdminRole"))
         {
-            logoutJButton.setEnabled(true); 
+            btnLogout.setEnabled(true);
             userNameJTextField.setEnabled(false);
             passwordField.setEnabled(false);
-            loginJButton.setEnabled(false);
+            btnLogin.setEnabled(false);
             
             SystemAdminWorkAreaJPanel sa = new SystemAdminWorkAreaJPanel(container, ecosystem);
             container.add("Sysadmin",sa);
@@ -165,10 +166,10 @@ public class MainJFrame extends javax.swing.JFrame {
         
         else if(ua.getRole().toString().equals("Business.Role.AdminRole"))
         {
-            logoutJButton.setEnabled(true); 
+            btnLogout.setEnabled(true); 
             userNameJTextField.setEnabled(false);
             passwordField.setEnabled(false);
-            loginJButton.setEnabled(false);
+            btnLogin.setEnabled(false);
             
             AdminWorkAreaJPanel aw = new AdminWorkAreaJPanel(container,ua,ecosystem);
             container.add("RestaurantAdmin",aw);
@@ -178,10 +179,10 @@ public class MainJFrame extends javax.swing.JFrame {
         
         else if(ua.getRole().toString().equals("Business.Role.DeliverManRole"))
         {
-            logoutJButton.setEnabled(true); 
+            btnLogout.setEnabled(true); 
             userNameJTextField.setEnabled(false);
             passwordField.setEnabled(false);
-            loginJButton.setEnabled(false);
+            btnLogin.setEnabled(false);
             
             OrdersDelivery dw = new OrdersDelivery(container, ua, ecosystem);
             container.add("DeliveryMan",dw);
@@ -191,10 +192,10 @@ public class MainJFrame extends javax.swing.JFrame {
         
         else if(ua.getRole().toString().equals("Business.Role.CustomerRole"))
         {
-            logoutJButton.setEnabled(true); 
+            btnLogout.setEnabled(true); 
             userNameJTextField.setEnabled(false);
             passwordField.setEnabled(false);
-            loginJButton.setEnabled(false);
+            btnLogin.setEnabled(false);
             
             CustomerRestaurantOrder ca = new CustomerRestaurantOrder(container, ua,ecosystem);
             container.add("Customer",ca);
@@ -207,13 +208,13 @@ public class MainJFrame extends javax.swing.JFrame {
         }
       
        
-    }//GEN-LAST:event_loginJButtonActionPerformed
+    }//GEN-LAST:event_btnLoginActionPerformed
 
-    private void logoutJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutJButtonActionPerformed
-        logoutJButton.setEnabled(false);
+    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
+        btnLogout.setEnabled(false);
         userNameJTextField.setEnabled(true);
         passwordField.setEnabled(true);
-        loginJButton.setEnabled(true);
+        btnLogin.setEnabled(true);
 
         userNameJTextField.setText("");
         passwordField.setText("");
@@ -224,7 +225,7 @@ public class MainJFrame extends javax.swing.JFrame {
         CardLayout crdLyt = (CardLayout) container.getLayout();
         crdLyt.next(container);
          dB4OUtil.storeSystem(ecosystem);
-    }//GEN-LAST:event_logoutJButtonActionPerformed
+    }//GEN-LAST:event_btnLogoutActionPerformed
 
     public void logOut(EcoSystem ecosystem)
     {
@@ -267,14 +268,14 @@ public class MainJFrame extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnLogin;
+    private javax.swing.JButton btnLogout;
     private javax.swing.JPanel container;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     public javax.swing.JPanel jPanel1;
     private javax.swing.JSplitPane jSplitPane1;
-    private javax.swing.JButton loginJButton;
+    private javax.swing.JLabel lblPassword;
+    private javax.swing.JLabel lblUserName;
     private javax.swing.JLabel loginJLabel;
-    private javax.swing.JButton logoutJButton;
     private javax.swing.JPasswordField passwordField;
     private javax.swing.JTextField userNameJTextField;
     // End of variables declaration//GEN-END:variables

@@ -62,7 +62,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         });
 
         manageMenu.setFont(new java.awt.Font("Rockwell Condensed", 1, 20)); // NOI18N
-        manageMenu.setText("Manage menu");
+        manageMenu.setText("Manage Menu");
         manageMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 manageMenuActionPerformed(evt);
@@ -100,12 +100,14 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
                         .addGap(150, 150, 150)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(manageMenu, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                            .addComponent(userJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 180, Short.MAX_VALUE)
-                            .addComponent(btnManageOrders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(btnManageOrders, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(119, 119, 119)
+                        .addComponent(userJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(84, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnManageOrders, manageMenu, userJButton});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnManageOrders, manageMenu});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,9 +124,9 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
                 .addComponent(btnManageOrders, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
                 .addComponent(manageMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
+                .addGap(34, 34, 34)
                 .addComponent(userJButton)
-                .addContainerGap(115, Short.MAX_VALUE))
+                .addContainerGap(119, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnManageOrders, manageMenu, userJButton});
