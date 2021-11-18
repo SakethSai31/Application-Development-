@@ -4,10 +4,10 @@
  */
 package userinterface;
 
-import Business.Consumer.ConsumerDirectory;
+import Business.Customer.CustomerDirectory;
 import Business.EcoSystem;
 import Business.DB4OUtil.DB4OUtil;
-import Business.DeliveryPerson.DeliveryPersonDirectory;
+import Business.DeliveryMan.DeliveryManDirectory;
 
 import Business.Organization;
 import Business.Restaurant.Restaurant;
@@ -44,7 +44,7 @@ public class MainJFrame extends javax.swing.JFrame {
         ecosystem = dB4OUtil.retrieveSystem();
         if(ecosystem == null)
         {
-            ecosystem = new EcoSystem(new RestaurantDirectory(),new ConsumerDirectory(),new DeliveryPersonDirectory());
+            ecosystem = new EcoSystem(new RestaurantDirectory(),new CustomerDirectory(),new DeliveryManDirectory());
         }
         
         this.setSize(1680, 1050);

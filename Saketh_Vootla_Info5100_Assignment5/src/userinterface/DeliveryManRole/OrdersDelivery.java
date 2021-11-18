@@ -5,9 +5,9 @@
  */
 package userinterface.DeliveryManRole;
 
-import Business.Consumer.ConsumerDirectory;
-import Business.DeliveryPerson.DeliveryPerson;
-import Business.DeliveryPerson.DeliveryPersonDirectory;
+import Business.Customer.CustomerDirectory;
+import Business.DeliveryMan.DeliveryMan;
+import Business.DeliveryMan.DeliveryManDirectory;
 import Business.EcoSystem;
 import Business.Order.FinalOrder;
 import Business.Restaurant.Restaurant;
@@ -32,8 +32,8 @@ public class OrdersDelivery extends javax.swing.JPanel {
      UserAccount userAccount;
     EcoSystem ecosystem;
     RestaurantDirectory rd;
-    ConsumerDirectory cd;
-    DeliveryPersonDirectory dd;
+    CustomerDirectory cd;
+    DeliveryManDirectory dd;
     Restaurant resto;
     public OrdersDelivery(JPanel userProcessContainer, UserAccount account,EcoSystem ecosystem) {
         this.userProcessContainer = userProcessContainer;
@@ -127,10 +127,10 @@ public class OrdersDelivery extends javax.swing.JPanel {
         rd = ecosystem.getRestaurantDirectory();
         FinalOrder f = rd.getOrder(orderId);
         f.setStatus("DeliveryMan Assigned");
-        f.setDeliveryPerson(userAccount.getUserName());
+        f.setDeliveryMan(userAccount.getUsername());
         dd = ecosystem.getDeliveryManDirectory();
-        DeliveryPerson d = dd.getDeliveryPerson(userAccount);
-        d.addOrdersCompleted(f);
+        DeliveryMan d = dd.getDeliveryMan(userAccount);
+        d.addDeliveredOrder(f);
         populateTable();
     }//GEN-LAST:event_btnAssignToMeActionPerformed
 
@@ -164,7 +164,7 @@ public class OrdersDelivery extends javax.swing.JPanel {
             orders = r.getAcceptedOrders();
             for(FinalOrder f: orders)
             {
-                String[] row = {r.getName(),f.getConsumer(),f.getDish(),f.getDate(),f.getStatus(),f.getOrderId()};
+                String[] row = {r.getName(),f.getCustomer(),f.getItem(),f.getDate(),f.getStatus(),f.getOrderId()};
                 dm.addRow(row);
             }
         }

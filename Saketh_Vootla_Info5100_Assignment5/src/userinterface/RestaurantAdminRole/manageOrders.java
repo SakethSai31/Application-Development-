@@ -5,10 +5,10 @@
  */
 package userinterface.RestaurantAdminRole;
 
-import Business.Consumer.Consumer;
-import Business.Consumer.ConsumerDirectory;
-import Business.DeliveryPerson.DeliveryPerson;
-import Business.DeliveryPerson.DeliveryPersonDirectory;
+import Business.Customer.Customer;
+import Business.Customer.CustomerDirectory;
+import Business.DeliveryMan.DeliveryMan;
+import Business.DeliveryMan.DeliveryManDirectory;
 import Business.EcoSystem;
 import Business.Order.FinalOrder;
 import Business.Order.Order;
@@ -38,9 +38,9 @@ public class manageOrders extends javax.swing.JPanel {
     UserAccount ua;
     Restaurant resto;
     RestaurantDirectory rd;
-    ConsumerDirectory cd;
+    CustomerDirectory cd;
     ArrayList<FinalOrder> ordersList;
-    DeliveryPersonDirectory dd;
+    DeliveryManDirectory dd;
     public manageOrders(JPanel userProcessContainer,Restaurant resto,EcoSystem ecosystem) {
         this.userProcessContainer = userProcessContainer;
         this.resto = resto;
@@ -251,8 +251,8 @@ public class manageOrders extends javax.swing.JPanel {
           String item = df.getValueAt(selectedRow, 1).toString();
           String date = df.getValueAt(selectedRow,2).toString();
           fo.setOrderId(String.valueOf(orderId));
-          fo.setConsumer(customer);
-          fo.setDish(item);
+          fo.setCustomer(customer);
+          fo.setItem(item);
           fo.setDate(date);
           fo.setRestaurant(resto.getName());
           fo.setStatus("Order Accepted");
@@ -271,13 +271,13 @@ public class manageOrders extends javax.swing.JPanel {
         DefaultComboBoxModel df = new DefaultComboBoxModel();
         rd = ecosystem.getRestaurantDirectory();
         FinalOrder f = rd.getOrder(orderId);
-        delCusto.setText(f.getConsumer());
-        delItem.setText(f.getDish());
+        delCusto.setText(f.getCustomer());
+        delItem.setText(f.getItem());
         dd = ecosystem.getDeliveryManDirectory();
-        ArrayList<DeliveryPerson> deliveryMen = dd.getDeliveryDirectory();
-        for(DeliveryPerson d: deliveryMen)
+        ArrayList<DeliveryMan> deliveryMen = dd.getDeliveryDirectory();
+        for(DeliveryMan d: deliveryMen)
         {
-            df.addElement(d.getdlyName());
+            df.addElement(d.getName());
         }
         delList.setModel(df);
     }//GEN-LAST:event_delDropDownActionPerformed
@@ -287,7 +287,7 @@ public class manageOrders extends javax.swing.JPanel {
         String orderId =(String) delDropDown.getSelectedItem();
         rd = ecosystem.getRestaurantDirectory();
         FinalOrder f = rd.getOrder(orderId);
-        f.setDeliveryPerson((String) delList.getSelectedItem());
+        f.setDeliveryMan((String) delList.getSelectedItem());
         f.setStatus("DeliveryMan Assigned");
         populatetree();
         delCusto.setText("");
@@ -327,15 +327,15 @@ public class manageOrders extends javax.swing.JPanel {
         cd = ecosystem.getCustomerDirectory();
         DefaultTableModel dt = (DefaultTableModel) ordersAvailble.getModel();
         dt.setRowCount(0);
-        ArrayList<Consumer> customers = cd.getConsumerList();
-        for(Consumer c: customers)
+        ArrayList<Customer> customers = cd.getCustomerList();
+        for(Customer c: customers)
         {
             ArrayList<Order> orders = c.getPreviousOrders();
             for(Order o: orders)
             {
                 if(o.getRestaurant().equals(resoName))
                 {
-                    String[] row = {c.getConsumerName(),o.getItem(),o.getEntryDateTime().toString()};
+                    String[] row = {c.getCustomerName(),o.getItem(),o.getEntryDateTime().toString()};
                     dt.addRow(row);
                 }
             }
@@ -349,9 +349,9 @@ public class manageOrders extends javax.swing.JPanel {
         df.setRowCount(0);
         for(FinalOrder f: orders)
         {
-            String[] row = {f.getConsumer(),f.getDish(),f.getStatus(),f.getDeliveryPerson(),f.getComment(),f.getOrderId(),f.getDate()};
+            String[] row = {f.getCustomer(),f.getItem(),f.getStatus(),f.getDeliveryMan(),f.getReview(),f.getOrderId(),f.getDate()};
             df.addRow(row);
-            if(f.getDeliveryPerson() == null)
+            if(f.getDeliveryMan() == null)
             dc.addElement(f.getOrderId());
         }
         

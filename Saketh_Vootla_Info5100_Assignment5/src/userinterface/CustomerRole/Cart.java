@@ -5,10 +5,10 @@
  */
 package userinterface.CustomerRole;
 
-import Business.Consumer.Consumer;
-import Business.Consumer.ConsumerDirectory;
+import Business.Customer.Customer;
+import Business.Customer.CustomerDirectory;
 import Business.EcoSystem;
-import Business.Order.OrderCart;
+import Business.Order.CartModel;
 import Business.Order.Order;
 import Business.Restaurant.RestaurantDirectory;
 import Business.UserAccount.UserAccount;
@@ -31,13 +31,13 @@ public class Cart extends javax.swing.JPanel {
     
     private JPanel userProcessContainer;
 
-     UserAccount user12Account;
+     UserAccount userAccount;
     EcoSystem ecosystem;
     RestaurantDirectory rd;
-    ConsumerDirectory cd;
-    Consumer customer;
+    CustomerDirectory cd;
+    Customer customer;
     int count = 0;
-    public Cart(JPanel userProcessContainer, Consumer customer,EcoSystem ecosystem) {
+    public Cart(JPanel userProcessContainer, Customer customer,EcoSystem ecosystem) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.customer = customer;
@@ -124,15 +124,15 @@ public class Cart extends javax.swing.JPanel {
 
     private void OrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderActionPerformed
         // TODO add your handling code here:
-        ArrayList<OrderCart> cartList = customer.getCart();
+        ArrayList<CartModel> cartList = customer.getCart();
         ArrayList<Order> orders = customer.getPreviousOrders();
         Order order;
         
-        for(OrderCart cm: cartList)
+        for(CartModel cm: cartList)
         {
            order = new Order();
            order.setItem(cm.getItem());
-           order.setRestaurant(cm.getBistro());
+           order.setRestaurant(cm.getRestaurant());
            order.setEntryDateTime(LocalDateTime.now());
            orders.add(order);
         }
@@ -164,10 +164,10 @@ public class Cart extends javax.swing.JPanel {
         DefaultTableModel df = (DefaultTableModel) cartTable.getModel();
         df.setRowCount(0);
         
-        ArrayList<OrderCart> cart = customer.getCart();
-        for(OrderCart cm : cart)
+        ArrayList<CartModel> cart = customer.getCart();
+        for(CartModel cm : cart)
         {
-            String[] row = {cm.getBistro(),cm.getItem()};
+            String[] row = {cm.getRestaurant(),cm.getItem()};
             df.addRow(row);
             
         }

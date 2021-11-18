@@ -198,7 +198,7 @@ public class RestaurantInfo extends javax.swing.JPanel {
     private void populateData() {
        txtAddResto.setText(resto.getAddress());
        txtCityResto.setText(resto.getCity());
-       txtUserResto.setText(resto.getUserAccount().getUserName());
-       txtPwdResto.setText(resto.getUserAccount().getPwd());
+       txtUserResto.setText(resto.getUserAccount().getUsername());
+       txtPwdResto.setText(resto.getUserAccount().getPassword());
     }
 }

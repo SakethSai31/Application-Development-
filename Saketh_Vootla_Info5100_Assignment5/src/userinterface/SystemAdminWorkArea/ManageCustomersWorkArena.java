@@ -5,8 +5,8 @@
  */
 package userinterface.SystemAdminWorkArea;
 
-import Business.Consumer.Consumer;
-import Business.Consumer.ConsumerDirectory;
+import Business.Customer.Customer;
+import Business.Customer.CustomerDirectory;
 import Business.EcoSystem;
 import Business.Restaurant.Restaurant;
 import java.awt.CardLayout;
@@ -27,7 +27,7 @@ public class ManageCustomersWorkArena extends javax.swing.JPanel {
      */
     JPanel userProcessContainer;
     EcoSystem ecosystem;
-    ConsumerDirectory cd;
+    CustomerDirectory cd;
     public ManageCustomersWorkArena(JPanel userProcessContainer , EcoSystem ecosystem) {
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
@@ -186,13 +186,13 @@ public class ManageCustomersWorkArena extends javax.swing.JPanel {
         // TODO add your handling code here:
         String custo = (String) listCustomers.getSelectedItem();
         cd = ecosystem.getCustomerDirectory();
-        ArrayList<Consumer> restos = cd.getConsumerList();
-        for(Consumer r: restos)
+        ArrayList<Customer> restos = cd.getCustomerList();
+        for(Customer r: restos)
         {
-            if(r.getConsumerName().equals(custo))
+            if(r.getCustomerName().equals(custo))
             {
-               txtUCustUpdate.setText(r.getUa().getUserName());
-               txtUpwdCusto.setText(r.getUa().getPwd());
+               txtUCustUpdate.setText(r.getUa().getUsername());
+               txtUpwdCusto.setText(r.getUa().getPassword());
             }
         }
     }//GEN-LAST:event_listCustomersActionPerformed
@@ -201,12 +201,12 @@ public class ManageCustomersWorkArena extends javax.swing.JPanel {
         // TODO add your handling code here:
         String custo = (String) listCustomers.getSelectedItem();
         cd = ecosystem.getCustomerDirectory();
-        ArrayList<Consumer> restos = cd.getConsumerList();
-        for(Consumer r: restos)
+        ArrayList<Customer> restos = cd.getCustomerList();
+        for(Customer r: restos)
         {
-            if(r.getConsumerName().equals(custo))
+            if(r.getCustomerName().equals(custo))
             {
-               r.getUa().setPwd(txtUpwdCusto.getText());
+               r.getUa().setPassword(txtUpwdCusto.getText());
             }
             
         }
@@ -232,16 +232,16 @@ public class ManageCustomersWorkArena extends javax.swing.JPanel {
 
     private void populateTable() {
          cd = ecosystem.getCustomerDirectory();
-        ArrayList<Consumer> custos = cd.getConsumerList();
+        ArrayList<Customer> custos = cd.getCustomerList();
         DefaultTableModel df = (DefaultTableModel) custoTable.getModel();
         df.setRowCount(0);
         DefaultComboBoxModel dc = new DefaultComboBoxModel();
         
-        for(Consumer c: custos)
+        for(Customer c: custos)
         {
-            String[] row = {c.getConsumerName(),c.getUa().getPwd()};
+            String[] row = {c.getCustomerName(),c.getUa().getPassword()};
             df.addRow(row);
-            dc.addElement(c.getConsumerName());
+            dc.addElement(c.getCustomerName());
         }
         custoTable.setModel(df);
         listCustomers.setModel(dc);

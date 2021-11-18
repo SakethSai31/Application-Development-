@@ -4,7 +4,7 @@
  */
 package userinterface.DeliveryManRole;
 
-import Business.WorkQueue.TestWorkRequest;
+import Business.WorkQueue.LabTestWorkRequest;
 import java.awt.CardLayout;
 import java.awt.Component;
 import javax.swing.JPanel;
@@ -18,11 +18,11 @@ import javax.swing.JPanel;
 public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
 
     JPanel userProcessContainer;
-    TestWorkRequest request;
+    LabTestWorkRequest request;
     /**
      * Creates new form ProcessWorkRequestJPanel
      */
-    public ProcessWorkRequestJPanel(JPanel userProcessContainer, TestWorkRequest request) {
+    public ProcessWorkRequestJPanel(JPanel userProcessContainer, LabTestWorkRequest request) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.request = request;

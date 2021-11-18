@@ -4,7 +4,7 @@
  */
 package Business.UserAccount;
 
-import Business.Staff.Staff;
+import Business.Employee.Employee;
 import Business.Role.Role;
 import java.util.ArrayList;
 
@@ -26,7 +26,7 @@ public class UserAccountDirectory {
     
     public UserAccount authenticateUser(String username, String password){
         for (UserAccount ua : userAccountList)
-            if (ua.getUserName().equals(username) && ua.getPwd().equals(password)){
+            if (ua.getUsername().equals(username) && ua.getPassword().equals(password)){
                 return ua;
             }
         return null;
@@ -35,17 +35,17 @@ public class UserAccountDirectory {
     public boolean authenticateUserLogin(String username,String password)
     {
         for (UserAccount ua : userAccountList)
-            if (ua.getUserName().equals(username) && ua.getPwd().equals(password)){
+            if (ua.getUsername().equals(username) && ua.getPassword().equals(password)){
                 return true;
             }
         return false;
     }
     
-    public UserAccount createUserAccount(String username, String password, Staff Staff, Role role){
+    public UserAccount createUserAccount(String username, String password, Employee employee, Role role){
         UserAccount userAccount = new UserAccount();
-        userAccount.setUserName(username);
-        userAccount.setPwd(password);
-        userAccount.setStaff(Staff);
+        userAccount.setUsername(username);
+        userAccount.setPassword(password);
+        userAccount.setEmployee(employee);
         userAccount.setRole(role);
         userAccountList.add(userAccount);
         return userAccount;
@@ -53,7 +53,7 @@ public class UserAccountDirectory {
     
     public boolean checkIfUsernameIsUnique(String username){
         for (UserAccount ua : userAccountList){
-            if (ua.getUserName().equals(username))
+            if (ua.getUsername().equals(username))
                 return false;
         }
         return true;
@@ -62,7 +62,7 @@ public class UserAccountDirectory {
     public UserAccount getUserAccount(String username) {
         for(UserAccount ua: userAccountList)
         {
-            if(ua.getUserName().equals(username))
+            if(ua.getUsername().equals(username))
             {
                 return ua;
             }

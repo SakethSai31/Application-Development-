@@ -6,8 +6,8 @@
 package Business;
 
 
-import Business.Consumer.ConsumerDirectory;
-import Business.DeliveryPerson.DeliveryPersonDirectory;
+import Business.Customer.CustomerDirectory;
+import Business.DeliveryMan.DeliveryManDirectory;
 import Business.Restaurant.RestaurantDirectory;
 import Business.Role.Role;
 import Business.Role.SystemAdminRole;
@@ -32,25 +32,25 @@ public class EcoSystem extends Organization{
         this.restaurantDirectory = restaurantDirectory;
     }
 
-    public ConsumerDirectory getCustomerDirectory() {
+    public CustomerDirectory getCustomerDirectory() {
         return customerDirectory;
     }
 
-    public void setCustomerDirectory(ConsumerDirectory customerDirectory) {
+    public void setCustomerDirectory(CustomerDirectory customerDirectory) {
         this.customerDirectory = customerDirectory;
     }
 
-    public DeliveryPersonDirectory getDeliveryManDirectory() {
+    public DeliveryManDirectory getDeliveryManDirectory() {
         return deliveryManDirectory;
     }
 
-    public void setDeliveryManDirectory(DeliveryPersonDirectory deliveryManDirectory) {
+    public void setDeliveryManDirectory(DeliveryManDirectory deliveryManDirectory) {
         this.deliveryManDirectory = deliveryManDirectory;
     }
-    private ConsumerDirectory customerDirectory;
-    private DeliveryPersonDirectory deliveryManDirectory;
+    private CustomerDirectory customerDirectory;
+    private DeliveryManDirectory deliveryManDirectory;
 
-    public EcoSystem(RestaurantDirectory restaurantDirectory, ConsumerDirectory customerDirectory, DeliveryPersonDirectory deliveryManDirectory) {
+    public EcoSystem(RestaurantDirectory restaurantDirectory, CustomerDirectory customerDirectory, DeliveryManDirectory deliveryManDirectory) {
 
         this.restaurantDirectory = restaurantDirectory;
         this.customerDirectory = customerDirectory;
@@ -84,7 +84,7 @@ public class EcoSystem extends Organization{
         
         for(UserAccount ua : userAccounts)
         {
-            if(ua.getUserName().equals(userName))
+            if(ua.getUsername().equals(userName))
                 return false;
         }
         

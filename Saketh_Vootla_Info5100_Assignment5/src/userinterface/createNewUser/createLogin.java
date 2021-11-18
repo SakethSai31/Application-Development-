@@ -5,18 +5,18 @@
  */
 package userinterface.createNewUser;
 
-import Business.Consumer.Consumer;
-import Business.Consumer.ConsumerDirectory;
+import Business.Customer.Customer;
+import Business.Customer.CustomerDirectory;
 import Business.DB4OUtil.DB4OUtil;
-import Business.DeliveryPerson.DeliveryPerson;
-import Business.DeliveryPerson.DeliveryPersonDirectory;
+import Business.DeliveryMan.DeliveryMan;
+import Business.DeliveryMan.DeliveryManDirectory;
 import Business.EcoSystem;
-import Business.Staff.Staff;
+import Business.Employee.Employee;
 import Business.Restaurant.Restaurant;
 import Business.Restaurant.RestaurantDirectory;
 import Business.Role.AdminRole;
-import Business.Role.ConsumerRole;
-import Business.Role.DeliveryPersonRole;
+import Business.Role.CustomerRole;
+import Business.Role.DeliverManRole;
 import Business.Role.Role;
 import Business.UserAccount.UserAccount;
 import Business.UserAccount.UserAccountDirectory;
@@ -41,10 +41,10 @@ public class createLogin extends javax.swing.JPanel {
     RestaurantDirectory rd;
     Restaurant restaurant;
     UserAccount ua;
-    Consumer customer;
-    DeliveryPerson delivery;
-    ConsumerDirectory cd;
-    DeliveryPersonDirectory dd;
+    Customer customer;
+    DeliveryMan delivery;
+    CustomerDirectory cd;
+    DeliveryManDirectory dd;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
     public createLogin(JPanel userProcessContainer,EcoSystem ecosystem) {
        this.ecosystem = ecosystem;
@@ -53,9 +53,9 @@ public class createLogin extends javax.swing.JPanel {
        if(ecosystem.getRestaurantDirectory() == null)
            ecosystem.setRestaurantDirectory(new RestaurantDirectory());
        if(ecosystem.getCustomerDirectory() == null)
-           ecosystem.setCustomerDirectory(new ConsumerDirectory());
+           ecosystem.setCustomerDirectory(new CustomerDirectory());
        if(ecosystem.getDeliveryManDirectory() == null)
-           ecosystem.setDeliveryManDirectory(new DeliveryPersonDirectory());
+           ecosystem.setDeliveryManDirectory(new DeliveryManDirectory());
        initComponents();
     }
 
@@ -197,13 +197,13 @@ public class createLogin extends javax.swing.JPanel {
         // TODO add your handling code here:
         UserAccountDirectory usersList = ecosystem.getUserAccountDirectory();
         String role = (String) roleCmb.getSelectedItem();
-        Staff employee = new Staff();
-        employee.setStaffName(txtName.getText());
+        Employee employee = new Employee();
+        employee.setName(txtName.getText());
         boolean userDoNotExists = true;
         ArrayList<UserAccount> users = usersList.getUserAccountList();
         for(UserAccount ua : users)
         {
-            if(ua.getUserName().equals(txtUName.getText()))
+            if(ua.getUsername().equals(txtUName.getText()))
                 userDoNotExists = false;
         }
         
@@ -222,16 +222,16 @@ public class createLogin extends javax.swing.JPanel {
                     ecosystem.setRestaurantDirectory(rd);
                     break;
                 case "Customer":
-                    usersList.createUserAccount(txtUName.getText(),txtPasswd.getText(), employee, new ConsumerRole());
+                    usersList.createUserAccount(txtUName.getText(),txtPasswd.getText(), employee, new CustomerRole());
                     ua = usersList.getUserAccount(txtUName.getText());
-                    customer = new Consumer(ua);
+                    customer = new Customer(ua);
                     cd = ecosystem.getCustomerDirectory();
                     cd.addCusto(customer);
                     break;
                 case "Delivery Man":
-                    usersList.createUserAccount(txtUName.getText(),txtPasswd.getText(), employee, new DeliveryPersonRole());
+                    usersList.createUserAccount(txtUName.getText(),txtPasswd.getText(), employee, new DeliverManRole());
                     ua = usersList.getUserAccount(txtUName.getText());
-                    delivery = new DeliveryPerson(ua);
+                    delivery = new DeliveryMan(ua);
                     dd = ecosystem.getDeliveryManDirectory();
                     dd.addDelivery(delivery);
                     break;

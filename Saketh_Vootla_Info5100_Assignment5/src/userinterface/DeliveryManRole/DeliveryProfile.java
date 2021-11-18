@@ -5,9 +5,9 @@
  */
 package userinterface.DeliveryManRole;
 
-import Business.Consumer.ConsumerDirectory;
-import Business.DeliveryPerson.DeliveryPerson;
-import Business.DeliveryPerson.DeliveryPersonDirectory;
+import Business.Customer.CustomerDirectory;
+import Business.DeliveryMan.DeliveryMan;
+import Business.DeliveryMan.DeliveryManDirectory;
 import Business.EcoSystem;
 import Business.Order.FinalOrder;
 import Business.Restaurant.Restaurant;
@@ -33,8 +33,8 @@ public class DeliveryProfile extends javax.swing.JPanel {
      UserAccount userAccount;
     EcoSystem ecosystem;
     RestaurantDirectory rd;
-    ConsumerDirectory cd;
-    DeliveryPersonDirectory dd;
+    CustomerDirectory cd;
+    DeliveryManDirectory dd;
     Restaurant resto;
     public DeliveryProfile(JPanel userProcessContainer, UserAccount account,EcoSystem ecosystem) {
         initComponents();
@@ -42,7 +42,7 @@ public class DeliveryProfile extends javax.swing.JPanel {
         this.userAccount = account;
         this.ecosystem = ecosystem;
         populateTable();
-        delName.setText(userAccount.getUserName());
+        delName.setText(userAccount.getUsername());
     }
 
     /**
@@ -138,14 +138,14 @@ public class DeliveryProfile extends javax.swing.JPanel {
 
     private void populateTable() {
         dd = ecosystem.getDeliveryManDirectory();
-        DeliveryPerson d = dd.getDeliveryPerson(userAccount);
+        DeliveryMan d = dd.getDeliveryMan(userAccount);
         DefaultTableModel dt = (DefaultTableModel) deliverablesStatus.getModel();
         dt.setRowCount(0);
-        ArrayList<FinalOrder> ordersDelivered = d.getrdersCompleted();
+        ArrayList<FinalOrder> ordersDelivered = d.getDeliveredOrders();
         
         for(FinalOrder f: ordersDelivered)
         {
-            String[] row = {f.getRestaurant(),f.getConsumer(),f.getDish(),f.getDate()};
+            String[] row = {f.getRestaurant(),f.getCustomer(),f.getItem(),f.getDate()};
             dt.addRow(row);
         }
         deliverablesStatus.setModel(dt);

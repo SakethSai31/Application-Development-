@@ -7,7 +7,7 @@ package userinterface.DeliveryManRole;
 import Business.EcoSystem;
 
 import Business.UserAccount.UserAccount;
-import Business.WorkQueue.TestWorkRequest;
+import Business.WorkQueue.LabTestWorkRequest;
 import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
@@ -129,7 +129,7 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
         }
         
         WorkRequest request = (WorkRequest)workRequestJTable.getValueAt(selectedRow, 0);
-        request.setRecipient(userAccount);
+        request.setReceiver(userAccount);
         request.setStatus("Pending");
         populateTable();
         
@@ -143,7 +143,7 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
             return;
         }
         
-        TestWorkRequest request = (TestWorkRequest)workRequestJTable.getValueAt(selectedRow, 0);
+        LabTestWorkRequest request = (LabTestWorkRequest)workRequestJTable.getValueAt(selectedRow, 0);
      
         request.setStatus("Processing");
         

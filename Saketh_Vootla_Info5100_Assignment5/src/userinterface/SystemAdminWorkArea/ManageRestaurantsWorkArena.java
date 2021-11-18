@@ -5,7 +5,7 @@
  */
 package userinterface.SystemAdminWorkArea;
 
-import Business.Consumer.ConsumerDirectory;
+import Business.Customer.CustomerDirectory;
 import Business.EcoSystem;
 import Business.Restaurant.Restaurant;
 import Business.Restaurant.RestaurantDirectory;
@@ -27,7 +27,7 @@ public class ManageRestaurantsWorkArena extends javax.swing.JPanel {
      */
     JPanel userProcessContainer;
     EcoSystem ecosystem;
-    ConsumerDirectory cd;
+    CustomerDirectory cd;
     RestaurantDirectory rd;
     public ManageRestaurantsWorkArena(JPanel userProcessContainer , EcoSystem ecosystem) {
         this.userProcessContainer = userProcessContainer;
@@ -201,8 +201,8 @@ public class ManageRestaurantsWorkArena extends javax.swing.JPanel {
         {
             if(r.getName().equals(resto))
             {
-                txtUnamePwd.setText(r.getUserAccount().getUserName());
-                txtRestoUpdtPwd.setText(r.getUserAccount().getPwd());}
+                txtUnamePwd.setText(r.getUserAccount().getUsername());
+                txtRestoUpdtPwd.setText(r.getUserAccount().getPassword());}
         }
     }//GEN-LAST:event_restoListActionPerformed
 
@@ -216,7 +216,7 @@ public class ManageRestaurantsWorkArena extends javax.swing.JPanel {
         {
             if(r.getName().equals(resto))
             {
-                r.getUserAccount().setPwd(pwd);
+                r.getUserAccount().setPassword(pwd);
                 JOptionPane.showMessageDialog(this, "Password Updated");
             }
         }
@@ -247,7 +247,7 @@ public class ManageRestaurantsWorkArena extends javax.swing.JPanel {
         ArrayList<Restaurant> restos = rd.getRestaurantList();
         for(Restaurant r: restos)
         {
-            String[] row = {r.getUserAccount().getUserName(),r.getUserAccount().getPwd()};
+            String[] row = {r.getUserAccount().getUsername(),r.getUserAccount().getPassword()};
             df.addRow(row);
             dc.addElement(r.getName());
         }

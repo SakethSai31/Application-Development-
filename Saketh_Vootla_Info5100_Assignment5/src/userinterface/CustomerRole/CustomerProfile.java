@@ -5,8 +5,8 @@
  */
 package userinterface.CustomerRole;
 
-import Business.Consumer.Consumer;
-import Business.Consumer.ConsumerDirectory;
+import Business.Customer.Customer;
+import Business.Customer.CustomerDirectory;
 import Business.EcoSystem;
 import Business.Order.FinalOrder;
 import Business.Order.Order;
@@ -29,18 +29,18 @@ public class CustomerProfile extends javax.swing.JPanel {
      * Creates new form CustomerProfile
      */
     JPanel userProcessContainer;
-    Consumer c;
+    Customer c;
     EcoSystem ecosystem;
     RestaurantDirectory rd;
-    ConsumerDirectory cd;
-    public CustomerProfile(JPanel userProcessContainer,Consumer c,EcoSystem ecosystem) {
+    CustomerDirectory cd;
+    public CustomerProfile(JPanel userProcessContainer,Customer c,EcoSystem ecosystem) {
         this.c = c;
         this.userProcessContainer = userProcessContainer;
         this.ecosystem = ecosystem;
                
         initComponents();
         populateTable();
-        nameLabel.setText(c.getConsumerName());
+        nameLabel.setText(c.getCustomerName());
     }
 
     /**
@@ -213,7 +213,7 @@ public class CustomerProfile extends javax.swing.JPanel {
         String orderId =(String) listOrdersReview.getSelectedItem();
         rd = ecosystem.getRestaurantDirectory();
         FinalOrder f = rd.getOrder(orderId);
-        f.setComment(textReview.getText());
+        f.setReview(textReview.getText());
         populateTable();
         textReview.setText("");
         reviewItem.setText("");
@@ -225,7 +225,7 @@ public class CustomerProfile extends javax.swing.JPanel {
         String orderId =(String) listOrdersReview.getSelectedItem();
         rd = ecosystem.getRestaurantDirectory();
         FinalOrder f = rd.getOrder(orderId);
-        reviewItem.setText(f.getDish());
+        reviewItem.setText(f.getItem());
         reviewResto.setText(f.getRestaurant());
         
     }//GEN-LAST:event_listOrdersReviewActionPerformed
@@ -254,7 +254,7 @@ public class CustomerProfile extends javax.swing.JPanel {
 
     private void populateTable() {
         
-        nameLabel.setText(c.getConsumerName());
+        nameLabel.setText(c.getCustomerName());
         ArrayList<Order> orders = c.getPreviousOrders();
         rd = ecosystem.getRestaurantDirectory();
         ArrayList<Restaurant> restos = rd.getRestaurantList();
@@ -267,9 +267,9 @@ public class CustomerProfile extends javax.swing.JPanel {
             finalOrders = r.getAcceptedOrders();
             for(FinalOrder f: finalOrders)
             {
-                if(f.getConsumer().equals(c.getConsumerName()))
+                if(f.getCustomer().equals(c.getCustomerName()))
                 {
-                    String[] row = {f.getRestaurant(),f.getDish(),f.getDate(),f.getOrderId(),f.getStatus(),f.getDeliveryPerson(),f.getComment()};
+                    String[] row = {f.getRestaurant(),f.getItem(),f.getDate(),f.getOrderId(),f.getStatus(),f.getDeliveryMan(),f.getReview()};
                     df.addRow(row);
                     dl.addElement(f.getOrderId());
                 }

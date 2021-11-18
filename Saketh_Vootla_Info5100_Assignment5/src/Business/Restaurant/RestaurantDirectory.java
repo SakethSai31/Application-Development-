@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author harold
+ * @author sunny
  */
 public class RestaurantDirectory {
     ArrayList<Restaurant> restaurantList = new ArrayList<Restaurant>();
@@ -28,7 +28,7 @@ public class RestaurantDirectory {
     {
         for(Restaurant r: restaurantList)
         {
-            if(ua.getUserName().equals(r.getUserAccount().getUserName()))
+            if(ua.getUsername().equals(r.getUserAccount().getUsername()))
                 return r;
         }
         

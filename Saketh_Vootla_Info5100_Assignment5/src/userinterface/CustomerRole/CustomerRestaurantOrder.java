@@ -5,10 +5,10 @@
  */
 package userinterface.CustomerRole;
 
-import Business.Consumer.Consumer;
-import Business.Consumer.ConsumerDirectory;
+import Business.Customer.Customer;
+import Business.Customer.CustomerDirectory;
 import Business.EcoSystem;
-import Business.Order.OrderCart;
+import Business.Order.CartModel;
 import Business.Restaurant.Restaurant;
 import Business.Restaurant.RestaurantDirectory;
 import Business.UserAccount.UserAccount;
@@ -33,13 +33,13 @@ public class CustomerRestaurantOrder extends javax.swing.JPanel {
      UserAccount userAccount;
     EcoSystem ecosystem;
     RestaurantDirectory rd;
-    ConsumerDirectory cd;
+    CustomerDirectory cd;
     public CustomerRestaurantOrder(JPanel userProcessContainer, UserAccount account,EcoSystem ecosystem) {
         this.userProcessContainer = userProcessContainer;
         this.userAccount = account;
         this.ecosystem = ecosystem;
         if(ecosystem.getCustomerDirectory() == null)
-            ecosystem.setCustomerDirectory(new ConsumerDirectory());
+            ecosystem.setCustomerDirectory(new CustomerDirectory());
         initComponents();
         populateTable();
     }
@@ -140,7 +140,7 @@ public class CustomerRestaurantOrder extends javax.swing.JPanel {
            //  JOptionPane.showMessageDialog(this, "No Item Selected"); 
           String resto = df.getValueAt(selectedRow,0).toString();
           String item = df.getValueAt(selectedRow, 1).toString();
-          OrderCart cm = new OrderCart(resto, item);
+          CartModel cm = new CartModel(resto, item);
           
        //   if(ecosystem.getCustomerDirectory() == null)
        //       ecosystem.setCustomerDirectory(new ());
@@ -148,7 +148,7 @@ public class CustomerRestaurantOrder extends javax.swing.JPanel {
        
           cd = ecosystem.getCustomerDirectory();
           
-          Consumer c = cd.getCustoo(userAccount);
+          Customer c = cd.getCustoo(userAccount);
           c.addToCart(cm);
           JOptionPane.showMessageDialog(this, "Added to cart");
           
@@ -157,7 +157,7 @@ public class CustomerRestaurantOrder extends javax.swing.JPanel {
     private void proceedToCartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proceedToCartActionPerformed
         // TODO add your handling code here:
            cd = ecosystem.getCustomerDirectory();
-          Consumer c = cd.getCustoo(userAccount); 
+          Customer c = cd.getCustoo(userAccount); 
           Cart cart = new Cart(userProcessContainer,c, ecosystem);
         userProcessContainer.add("cart",cart);
             CardLayout crdLyt = (CardLayout) userProcessContainer.getLayout();
@@ -167,7 +167,7 @@ public class CustomerRestaurantOrder extends javax.swing.JPanel {
     private void btnViewProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewProfileActionPerformed
         // TODO add your handling code here:
         cd = ecosystem.getCustomerDirectory();
-        Consumer c = cd.getCustoo(userAccount);
+        Customer c = cd.getCustoo(userAccount);
         CustomerProfile cp = new CustomerProfile(userProcessContainer,c,ecosystem);
         userProcessContainer.add("profile",cp);
             CardLayout crdLyt = (CardLayout) userProcessContainer.getLayout();

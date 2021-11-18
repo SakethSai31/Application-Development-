@@ -13,11 +13,11 @@ import java.time.LocalDateTime;
  */
 public class FinalOrder {
     String restaurant;
-    String dish;
-    String deliveryPerson;
-    String consumer;
+    String item;
+    String deliveryMan;
+    String customer;
     String status;
-    String comment;
+    String review;
     String date;
     String orderId;
 
@@ -45,28 +45,28 @@ public class FinalOrder {
         this.restaurant = restaurant;
     }
 
-    public String getDish() {
-        return dish;
+    public String getItem() {
+        return item;
     }
 
-    public void setDish(String dish) {
-        this.dish = dish;
+    public void setItem(String item) {
+        this.item = item;
     }
 
-    public String getDeliveryPerson() {
-        return deliveryPerson;
+    public String getDeliveryMan() {
+        return deliveryMan;
     }
 
-    public void setDeliveryPerson(String deliveryPerson) {
-        this.deliveryPerson = deliveryPerson;
+    public void setDeliveryMan(String deliveryMan) {
+        this.deliveryMan = deliveryMan;
     }
 
-    public String getConsumer() {
-        return consumer;
+    public String getCustomer() {
+        return customer;
     }
 
-    public void setConsumer(String consumer) {
-        this.consumer = consumer;
+    public void setCustomer(String customer) {
+        this.customer = customer;
     }
 
     public String getStatus() {
@@ -77,11 +77,11 @@ public class FinalOrder {
         this.status = status;
     }
 
-    public String getComment() {
-        return comment;
+    public String getReview() {
+        return review;
     }
 
-    public void setComment(String review) {
-        this.comment = review;
+    public void setReview(String review) {
+        this.review = review;
     }
 }

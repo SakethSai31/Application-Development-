@@ -15,7 +15,7 @@ public abstract class WorkRequest {
 
     private String message;
     private UserAccount sender;
-    private UserAccount recipient;
+    private UserAccount receiver;
     private String status;
     private Date requestDate;
     private Date resolveDate;
@@ -40,12 +40,12 @@ public abstract class WorkRequest {
         this.sender = sender;
     }
 
-    public UserAccount getRecipient() {
-        return recipient;
+    public UserAccount getReceiver() {
+        return receiver;
     }
 
-    public void setRecipient(UserAccount recipient) {
-        this.recipient = recipient;
+    public void setReceiver(UserAccount receiver) {
+        this.receiver = receiver;
     }
 
     public String getStatus() {

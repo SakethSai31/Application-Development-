@@ -18,8 +18,8 @@ public abstract class Role {
     
     public enum RoleType{
         RestaurantAdmin("RestaurantAdmin"),
-        Consumer("Customer"),
-        DeliveryPerson("Delivery"),
+        Customer("Customer"),
+        DeliveryMan("Delivery"),
         SysAdmin("Sysadmin");
         
         private String value;

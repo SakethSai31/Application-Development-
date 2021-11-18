@@ -5,9 +5,9 @@
  */
 package userinterface.SystemAdminWorkArea;
 
-import Business.Consumer.ConsumerDirectory;
-import Business.DeliveryPerson.DeliveryPerson;
-import Business.DeliveryPerson.DeliveryPersonDirectory;
+import Business.Customer.CustomerDirectory;
+import Business.DeliveryMan.DeliveryMan;
+import Business.DeliveryMan.DeliveryManDirectory;
 import Business.EcoSystem;
 import java.awt.CardLayout;
 import java.util.ArrayList;
@@ -25,7 +25,7 @@ public class ManageDeliveryManWorkArena extends javax.swing.JPanel {
      */
     JPanel userProcessContainer;
     EcoSystem ecosystem;
-    DeliveryPersonDirectory dd;
+    DeliveryManDirectory dd;
     public ManageDeliveryManWorkArena(JPanel userProcessContainer , EcoSystem ecosystem) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
@@ -109,11 +109,11 @@ public class ManageDeliveryManWorkArena extends javax.swing.JPanel {
 
     private void populateTable() {
         dd = ecosystem.getDeliveryManDirectory();
-        ArrayList<DeliveryPerson> deliveryMen = dd.getDeliveryDirectory();
+        ArrayList<DeliveryMan> deliveryMen = dd.getDeliveryDirectory();
         DefaultTableModel df = (DefaultTableModel) delTable.getModel();
-        for(DeliveryPerson d: deliveryMen)
+        for(DeliveryMan d: deliveryMen)
         {
-            String[] row = {d.getUa().getUserName(),d.getUa().getPwd()};
+            String[] row = {d.getUa().getUsername(),d.getUa().getPassword()};
             df.addRow(row);
         }
         delTable.setModel(df);

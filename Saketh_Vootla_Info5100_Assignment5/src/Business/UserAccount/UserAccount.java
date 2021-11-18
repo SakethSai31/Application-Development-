@@ -4,7 +4,7 @@
  */
 package Business.UserAccount;
 
-import Business.Staff.Staff;
+import Business.Employee.Employee;
 import Business.Role.Role;
 import Business.WorkQueue.WorkQueue;
 
@@ -14,9 +14,9 @@ import Business.WorkQueue.WorkQueue;
  */
 public class UserAccount {
     
-    private String userName;
-    private String pwd;
-    private Staff Staff;
+    private String username;
+    private String password;
+    private Employee employee;
     private Role role;
     private WorkQueue workQueue;
 
@@ -26,36 +26,36 @@ public class UserAccount {
     
     
     
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String username) {
-        this.userName = username;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getPwd() {
-        return pwd;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPwd(String pwd) {
-        this.pwd = pwd;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public Role getRole() {
         return role;
     }
 
-    public void setStaff(Staff staff) {
-        this.Staff = staff;
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
 
     public void setRole(Role role) {
         this.role = role;
     }
 
-    public Staff getStaff() {
-        return Staff;
+    public Employee getEmployee() {
+        return employee;
     }
 
     public WorkQueue getWorkQueue() {
@@ -66,7 +66,7 @@ public class UserAccount {
     
     @Override
     public String toString() {
-        return userName;
+        return username;
     }
     
     

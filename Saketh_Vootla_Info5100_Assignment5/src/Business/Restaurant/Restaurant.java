@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author harold
+ * @author sunny
  */
 public class Restaurant {
     String name;

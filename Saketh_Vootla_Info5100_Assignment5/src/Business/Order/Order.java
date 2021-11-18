@@ -15,7 +15,7 @@ import java.util.Date;
 public class Order {
     String id;
     String sender;
-    String recipient;
+    String receiver;
 
     public String getId() {
         return id;
@@ -33,20 +33,20 @@ public class Order {
         this.sender = sender;
     }
 
-    public String getRecipient() {
-        return recipient;
+    public String getReceiver() {
+        return receiver;
     }
 
-    public void setRecipient(String receiver) {
-        this.recipient = receiver;
+    public void setReceiver(String receiver) {
+        this.receiver = receiver;
     }
 
     public String getStatus() {
-        return orderStatus;
+        return status;
     }
 
     public void setStatus(String status) {
-        this.orderStatus = status;
+        this.status = status;
     }
 
     public String getItem() {
@@ -56,7 +56,7 @@ public class Order {
     public void setItem(String item) {
         this.item = item;
     }
-    String orderStatus;
+    String status;
     String item;
     String message;
     String restaurant;
