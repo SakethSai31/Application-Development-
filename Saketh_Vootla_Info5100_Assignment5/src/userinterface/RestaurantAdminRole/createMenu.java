@@ -56,10 +56,20 @@ public class createMenu extends javax.swing.JPanel {
         txtAddItem = new javax.swing.JTextField();
         btnAddItem = new javax.swing.JButton();
         back = new javax.swing.JButton();
+        bgdimg = new javax.swing.JLabel();
 
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(72, 75, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Franklin Gothic Medium", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Item List");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 290, 120, 60));
 
         jScrollPane1.setViewportView(menuList);
+
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, 96, -1));
+        add(txtAddItem, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 310, 82, -1));
 
         btnAddItem.setText("Add Item");
         btnAddItem.addActionListener(new java.awt.event.ActionListener() {
@@ -67,6 +77,7 @@ public class createMenu extends javax.swing.JPanel {
                 btnAddItemActionPerformed(evt);
             }
         });
+        add(btnAddItem, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 350, -1, -1));
 
         back.setText("Back");
         back.addActionListener(new java.awt.event.ActionListener() {
@@ -74,47 +85,10 @@ public class createMenu extends javax.swing.JPanel {
                 backActionPerformed(evt);
             }
         });
+        add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 100, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(72, 72, 72)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(86, 86, 86)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtAddItem, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnAddItem))))
-                .addContainerGap(142, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(back)
-                .addGap(48, 48, 48))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(back)
-                .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtAddItem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(42, 42, 42)
-                        .addComponent(btnAddItem)))
-                .addContainerGap(156, Short.MAX_VALUE))
-        );
+        bgdimg.setIcon(new javax.swing.ImageIcon("D:\\Study\\Northeastern University\\INFO 5100_AED\\Assignments\\Assignment Images\\Assignment 5\\Restaurant_Menu_-_Food_Promotion_768x589.jpg")); // NOI18N
+        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -6, 770, 600));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddItemActionPerformed
@@ -134,6 +108,7 @@ public class createMenu extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton back;
+    private javax.swing.JLabel bgdimg;
     private javax.swing.JButton btnAddItem;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
