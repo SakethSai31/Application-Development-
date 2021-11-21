@@ -16,7 +16,7 @@ import java.awt.CardLayout;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import userinterface.CustomerRole.CustomerRestaurantOrder;
+import userinterface.CustomerRoles.CustomerRestaurantOrder;
 import userinterface.DeliveryManRole.OrdersDelivery;
 import userinterface.RestaurantAdminRole.AdminWorkAreaJPanel;
 import userinterface.SystemAdminWorkArea.SystemAdminWorkAreaJPanel;

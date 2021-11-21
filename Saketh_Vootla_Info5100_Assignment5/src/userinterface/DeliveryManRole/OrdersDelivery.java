@@ -58,6 +58,9 @@ public class OrdersDelivery extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         btnAssignToMe = new javax.swing.JButton();
         btnProfile = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         deliveryTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -69,7 +72,10 @@ public class OrdersDelivery extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(deliveryTable);
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 77, 535, 157));
+
         jLabel1.setText("Orders to be delivered");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 40, -1, -1));
 
         btnAssignToMe.setText("Assign to me");
         btnAssignToMe.addActionListener(new java.awt.event.ActionListener() {
@@ -77,6 +83,7 @@ public class OrdersDelivery extends javax.swing.JPanel {
                 btnAssignToMeActionPerformed(evt);
             }
         });
+        add(btnAssignToMe, new org.netbeans.lib.awtextra.AbsoluteConstraints(246, 252, -1, -1));
 
         btnProfile.setText("View Profile");
         btnProfile.addActionListener(new java.awt.event.ActionListener() {
@@ -84,39 +91,10 @@ public class OrdersDelivery extends javax.swing.JPanel {
                 btnProfileActionPerformed(evt);
             }
         });
+        add(btnProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 36, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 443, Short.MAX_VALUE)
-                                .addComponent(btnProfile))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 535, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(246, 246, 246)
-                        .addComponent(btnAssignToMe)))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(btnProfile))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnAssignToMe)
-                .addContainerGap(114, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Study\\Northeastern University\\INFO 5100_AED\\Assignments\\Assignment Images\\Assignment 5\\delivery_822x606.jpg")); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, 5, 850, 600));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAssignToMeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignToMeActionPerformed
@@ -148,6 +126,7 @@ public class OrdersDelivery extends javax.swing.JPanel {
     private javax.swing.JButton btnProfile;
     private javax.swing.JTable deliveryTable;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 

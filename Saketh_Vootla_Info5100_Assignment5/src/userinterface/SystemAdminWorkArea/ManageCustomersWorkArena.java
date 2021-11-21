@@ -52,13 +52,13 @@ public class ManageCustomersWorkArena extends javax.swing.JPanel {
         listCustomers = new javax.swing.JComboBox<>();
         txtUCustUpdate = new javax.swing.JTextField();
         txtUpwdCusto = new javax.swing.JTextField();
-        btnDelete = new javax.swing.JButton();
-        btnUpdate = new javax.swing.JButton();
         lblUsername = new javax.swing.JLabel();
         lblPassword = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         custoTable1 = new javax.swing.JTable();
+        btnDelete = new javax.swing.JButton();
+        btnUpdate = new javax.swing.JButton();
         bgdimg = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -80,7 +80,11 @@ public class ManageCustomersWorkArena extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 107, 389, 141));
 
+        btnHome.setBackground(new java.awt.Color(2, 29, 43));
+        btnHome.setFont(new java.awt.Font("Franklin Gothic Demi Cond", 0, 14)); // NOI18N
+        btnHome.setForeground(new java.awt.Color(255, 255, 255));
         btnHome.setText("Home");
+        btnHome.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHomeActionPerformed(evt);
@@ -103,22 +107,6 @@ public class ManageCustomersWorkArena extends javax.swing.JPanel {
         txtUCustUpdate.setEditable(false);
         add(txtUCustUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 420, 118, -1));
         add(txtUpwdCusto, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 460, 118, -1));
-
-        btnDelete.setText("Delete");
-        btnDelete.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteActionPerformed(evt);
-            }
-        });
-        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 90, 30));
-
-        btnUpdate.setText("Update");
-        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateActionPerformed(evt);
-            }
-        });
-        add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 493, 80, 30));
 
         lblUsername.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
         lblUsername.setForeground(new java.awt.Color(255, 255, 255));
@@ -143,6 +131,30 @@ public class ManageCustomersWorkArena extends javax.swing.JPanel {
         jScrollPane2.setViewportView(custoTable1);
 
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 107, 389, 141));
+
+        btnDelete.setBackground(new java.awt.Color(3, 29, 43));
+        btnDelete.setFont(new java.awt.Font("Franklin Gothic Demi Cond", 0, 14)); // NOI18N
+        btnDelete.setForeground(new java.awt.Color(255, 255, 255));
+        btnDelete.setText("Delete");
+        btnDelete.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 100, 40));
+
+        btnUpdate.setBackground(new java.awt.Color(1, 29, 43));
+        btnUpdate.setFont(new java.awt.Font("Franklin Gothic Demi Cond", 0, 14)); // NOI18N
+        btnUpdate.setForeground(new java.awt.Color(255, 255, 255));
+        btnUpdate.setText("Update");
+        btnUpdate.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 500, 100, 40));
 
         bgdimg.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         bgdimg.setIcon(new javax.swing.ImageIcon("D:\\Study\\Northeastern University\\INFO 5100_AED\\Assignments\\Assignment Images\\Assignment 5\\connecting_with_customers_822x606.jpg")); // NOI18N
@@ -220,7 +232,7 @@ public class ManageCustomersWorkArena extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private void populateTable() {
-         cd = ecosystem.getCustomerDirectory();
+        cd = ecosystem.getCustomerDirectory();
         ArrayList<Customer> custos = cd.getCustomerList();
         DefaultTableModel df = (DefaultTableModel) custoTable.getModel();
         df.setRowCount(0);

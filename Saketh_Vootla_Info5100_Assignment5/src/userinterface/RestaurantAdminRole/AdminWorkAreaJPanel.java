@@ -55,8 +55,8 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("My Work Area -Adminstrative Role");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 50, 440, -1));
+        jLabel1.setText("Restaurant Manger - Role");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 70, 440, -1));
 
         userJButton.setFont(new java.awt.Font("Rockwell Condensed", 0, 20)); // NOI18N
         userJButton.setText("Manage Restaurant Info");
@@ -87,12 +87,11 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
 
         enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         enterpriseLabel.setForeground(new java.awt.Color(255, 255, 255));
-        enterpriseLabel.setText("Restaurant :");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 130, 120, 30));
+        enterpriseLabel.setText("Restaurant Name:");
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 130, 180, 30));
 
         valueLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         valueLabel.setForeground(new java.awt.Color(255, 255, 255));
-        valueLabel.setText("<value>");
         add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 132, 130, 30));
 
         bgdimg.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);

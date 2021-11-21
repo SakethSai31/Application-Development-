@@ -119,7 +119,7 @@ public class createMenu extends javax.swing.JPanel {
 
     public void refreshTable() {
           
-           menu = resto.getMenu();
+          menu = resto.getMenu();
           DefaultListModel dl = new DefaultListModel();
           
           for(String s: menu)
