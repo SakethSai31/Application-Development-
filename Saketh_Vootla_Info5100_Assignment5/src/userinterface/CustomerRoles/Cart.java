@@ -158,7 +158,7 @@ public class Cart extends javax.swing.JPanel {
         DefaultTableModel dx = (DefaultTableModel) cartTable.getModel();
         dx.setRowCount(0);
         
-        JOptionPane.showMessageDialog(this, "Order placed");
+        JOptionPane.showMessageDialog(this, "Order is placed");
     }//GEN-LAST:event_OrderActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

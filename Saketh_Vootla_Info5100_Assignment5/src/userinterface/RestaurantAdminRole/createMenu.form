@@ -47,7 +47,7 @@
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="290" y="340" width="96" height="-1"/>
+          <AbsoluteConstraints x="120" y="140" width="120" height="310"/>
         </Constraint>
       </Constraints>
 
@@ -68,7 +68,7 @@
     <Component class="javax.swing.JTextField" name="txtAddItem">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="400" y="310" width="82" height="-1"/>
+          <AbsoluteConstraints x="670" y="190" width="82" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -81,7 +81,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="400" y="350" width="-1" height="-1"/>
+          <AbsoluteConstraints x="670" y="233" width="90" height="40"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -94,14 +94,28 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="680" y="100" width="-1" height="-1"/>
+          <AbsoluteConstraints x="700" y="20" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="30" green="6b" red="56" type="rgb"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="0" y="20" width="690" height="30"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignFlowLayout"/>
+    </Container>
     <Component class="javax.swing.JLabel" name="bgdimg">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="D:\Study\Northeastern University\INFO 5100_AED\Assignments\Assignment Images\Assignment 5\Restaurant_Menu_-_Food_Promotion_768x589.jpg"/>
+          <Image iconType="2" name="D:\Study\Northeastern University\INFO 5100_AED\Assignments\Assignment Images\Assignment 5\menu_1_768x589.jpg"/>
         </Property>
       </Properties>
       <Constraints>

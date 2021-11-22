@@ -139,7 +139,7 @@ public class CustomerRestaurantOrder extends javax.swing.JPanel {
           
           Customer c = cd.getCustoo(userAccount);
           c.addToCart(cm);
-          JOptionPane.showMessageDialog(this, "Added to cart");
+          JOptionPane.showMessageDialog(this, "Added to the cart");
           
     }//GEN-LAST:event_addToCartActionPerformed
 

@@ -16,6 +16,7 @@ import java.awt.CardLayout;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
@@ -182,6 +183,8 @@ public class CustomerProfile extends javax.swing.JPanel {
         textReview.setText("");
         reviewItem.setText("");
         reviewResto.setText("");
+        
+        JOptionPane.showMessageDialog(this, "Thank you for the feedback");
     }//GEN-LAST:event_btnUpdateReviewActionPerformed
 
     private void listOrdersReviewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listOrdersReviewActionPerformed
