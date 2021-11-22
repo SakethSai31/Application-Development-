@@ -72,26 +72,37 @@ public class OrdersDelivery extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(deliveryTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 77, 535, 157));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 535, 157));
 
-        jLabel1.setText("Orders to be delivered");
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Delivery Orders");
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 40, -1, -1));
 
-        btnAssignToMe.setText("Assign to me");
+        btnAssignToMe.setBackground(new java.awt.Color(173, 179, 205));
+        btnAssignToMe.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnAssignToMe.setForeground(new java.awt.Color(51, 51, 51));
+        btnAssignToMe.setText("Assign");
+        btnAssignToMe.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnAssignToMe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAssignToMeActionPerformed(evt);
             }
         });
-        add(btnAssignToMe, new org.netbeans.lib.awtextra.AbsoluteConstraints(246, 252, -1, -1));
+        add(btnAssignToMe, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 510, 120, 50));
 
-        btnProfile.setText("View Profile");
+        btnProfile.setBackground(new java.awt.Color(47, 46, 51));
+        btnProfile.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnProfile.setForeground(new java.awt.Color(255, 255, 255));
+        btnProfile.setText("View Delivery Profile");
+        btnProfile.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnProfile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProfileActionPerformed(evt);
             }
         });
-        add(btnProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 36, -1, -1));
+        add(btnProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 140, 170, 50));
 
         jLabel2.setIcon(new javax.swing.ImageIcon("D:\\Study\\Northeastern University\\INFO 5100_AED\\Assignments\\Assignment Images\\Assignment 5\\delivery_822x606.jpg")); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, 5, 850, 600));

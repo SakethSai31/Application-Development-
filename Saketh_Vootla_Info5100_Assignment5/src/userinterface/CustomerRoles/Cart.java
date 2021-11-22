@@ -56,9 +56,14 @@ public class Cart extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         cartTable = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
+        lbltitle = new javax.swing.JLabel();
         Order = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        bgdimg = new javax.swing.JLabel();
+
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cartTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -70,56 +75,68 @@ public class Cart extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(cartTable);
 
-        jLabel1.setText("Cart");
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 301, 250));
 
-        Order.setText("Order");
+        lbltitle.setFont(new java.awt.Font("Serif", 3, 36)); // NOI18N
+        lbltitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbltitle.setText("Final Cart");
+        add(lbltitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, 310, 50));
+
+        Order.setBackground(new java.awt.Color(229, 232, 237));
+        Order.setFont(new java.awt.Font("Serif", 2, 14)); // NOI18N
+        Order.setText("Checkout");
+        Order.setBorder(null);
         Order.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 OrderActionPerformed(evt);
             }
         });
+        add(Order, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 430, 140, -1));
 
+        btnBack.setBackground(new java.awt.Color(229, 232, 237));
+        btnBack.setFont(new java.awt.Font("Serif", 2, 14)); // NOI18N
         btnBack.setText("Back");
+        btnBack.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 430, 70, 20));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Order)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(282, 282, 282)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
-                        .addComponent(btnBack)))
-                .addContainerGap())
+        jPanel1.setBackground(new java.awt.Color(161, 179, 193));
+        jPanel1.setForeground(new java.awt.Color(161, 179, 193));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 150, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(btnBack)))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(Order)
-                .addContainerGap(103, Short.MAX_VALUE))
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
         );
+
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 390, 150, 50));
+
+        jPanel2.setBackground(new java.awt.Color(229, 232, 237));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 220, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, 220, 50));
+
+        bgdimg.setIcon(new javax.swing.ImageIcon("D:\\Study\\Northeastern University\\INFO 5100_AED\\Assignments\\Assignment Images\\Assignment 5\\cart_810x555.jpg")); // NOI18N
+        add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 550));
     }// </editor-fold>//GEN-END:initComponents
 
     private void OrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrderActionPerformed
@@ -154,10 +171,13 @@ public class Cart extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Order;
+    private javax.swing.JLabel bgdimg;
     private javax.swing.JButton btnBack;
     private javax.swing.JTable cartTable;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lbltitle;
     // End of variables declaration//GEN-END:variables
 
     public void populateTable() {

@@ -60,10 +60,15 @@ public class CustomerRestaurantOrder extends javax.swing.JPanel {
         addToCart = new javax.swing.JButton();
         proceedToCart = new javax.swing.JButton();
         btnViewProfile = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
 
-        jLabel2.setText("Items Available");
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setFont(new java.awt.Font("Serif", 3, 48)); // NOI18N
+        jLabel2.setText("Menu");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 150, -1));
 
         restaurantItems.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -75,59 +80,43 @@ public class CustomerRestaurantOrder extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(restaurantItems);
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 272, 140));
+
+        addToCart.setBackground(new java.awt.Color(192, 218, 233));
+        addToCart.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         addToCart.setText("Add to cart");
+        addToCart.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         addToCart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addToCartActionPerformed(evt);
             }
         });
+        add(addToCart, new org.netbeans.lib.awtextra.AbsoluteConstraints(189, 173, 90, 30));
 
-        proceedToCart.setText("Proceed to cart");
+        proceedToCart.setBackground(new java.awt.Color(192, 218, 233));
+        proceedToCart.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        proceedToCart.setText("Checkout");
+        proceedToCart.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         proceedToCart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 proceedToCartActionPerformed(evt);
             }
         });
+        add(proceedToCart, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, 160, 40));
 
+        btnViewProfile.setBackground(new java.awt.Color(192, 218, 233));
+        btnViewProfile.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnViewProfile.setText("View Profile");
+        btnViewProfile.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnViewProfile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewProfileActionPerformed(evt);
             }
         });
+        add(btnViewProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 90, 40));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(68, 68, 68)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(addToCart)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(proceedToCart))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(97, 97, 97)
-                .addComponent(btnViewProfile)
-                .addContainerGap(60, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addComponent(jLabel2)
-                .addGap(38, 38, 38)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnViewProfile))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addToCart)
-                    .addComponent(proceedToCart))
-                .addContainerGap(110, Short.MAX_VALUE))
-        );
+        jLabel3.setIcon(new javax.swing.ImageIcon("D:\\Study\\Northeastern University\\INFO 5100_AED\\Assignments\\Assignment Images\\Assignment 5\\placing-an-order_687x492.jpg")); // NOI18N
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 490));
     }// </editor-fold>//GEN-END:initComponents
 
     private void addToCartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addToCartActionPerformed
@@ -181,6 +170,7 @@ public class CustomerRestaurantOrder extends javax.swing.JPanel {
     private javax.swing.JButton btnViewProfile;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton proceedToCart;
     private javax.swing.JTable restaurantItems;
