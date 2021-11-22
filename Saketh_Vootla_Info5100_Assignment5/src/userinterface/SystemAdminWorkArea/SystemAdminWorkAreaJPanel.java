@@ -64,29 +64,47 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnManageNetwork.setText("Manage All Customers");
+        jPanel2.setBackground(new java.awt.Color(30, 119, 179));
+
+        btnManageNetwork.setBackground(new java.awt.Color(12, 77, 167));
+        btnManageNetwork.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnManageNetwork.setForeground(new java.awt.Color(255, 255, 255));
+        btnManageNetwork.setText("Customer Database");
+        btnManageNetwork.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnManageNetwork.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageNetworkActionPerformed(evt);
             }
         });
 
-        btnManageEnterprise.setText("Manage Restaurants");
+        btnManageEnterprise.setBackground(new java.awt.Color(12, 77, 167));
+        btnManageEnterprise.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnManageEnterprise.setForeground(new java.awt.Color(255, 255, 255));
+        btnManageEnterprise.setText("Restaurant Database");
+        btnManageEnterprise.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnManageEnterprise.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageEnterpriseActionPerformed(evt);
             }
         });
 
-        btnManageAdmin.setText("Manage Deliveryman");
+        btnManageAdmin.setBackground(new java.awt.Color(12, 77, 167));
+        btnManageAdmin.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnManageAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        btnManageAdmin.setText("Delivery Database");
+        btnManageAdmin.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnManageAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageAdminActionPerformed(evt);
             }
         });
 
+        btnAddUser.setBackground(new java.awt.Color(12, 77, 167));
+        btnAddUser.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        btnAddUser.setForeground(new java.awt.Color(255, 255, 255));
         btnAddUser.setIcon(new javax.swing.ImageIcon("D:\\Study\\Northeastern University\\INFO 5100_AED\\Assignments\\Assignment Images\\Assignment 5\\icons8-user-64.png")); // NOI18N
         btnAddUser.setText("Add New User");
+        btnAddUser.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnAddUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddUserActionPerformed(evt);
@@ -147,7 +165,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         bgdimg.setIcon(new javax.swing.ImageIcon("D:\\Study\\Northeastern University\\INFO 5100_AED\\Assignments\\Assignment Images\\Assignment 5\\system-administrator.jpg")); // NOI18N
         add(bgdimg, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, -10, 530, 710));
 
-        imgtitle.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
+        imgtitle.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         imgtitle.setText("Admin Control Panel\n");
         add(imgtitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, 460, 70));
 

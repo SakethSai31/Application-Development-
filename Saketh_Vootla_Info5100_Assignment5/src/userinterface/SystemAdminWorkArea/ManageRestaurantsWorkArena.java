@@ -61,10 +61,11 @@ public class ManageRestaurantsWorkArena extends javax.swing.JPanel {
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Viner Hand ITC", 3, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Serif", 3, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("RESTAURANT   LIST");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 47, 450, 30));
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 450, 30));
 
         restosTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -76,23 +77,31 @@ public class ManageRestaurantsWorkArena extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(restosTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 95, -1, 103));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, 103));
 
+        jButton1.setBackground(new java.awt.Color(2, 107, 173));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Delete");
+        jButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(186, 216, -1, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 189, 70, 30));
 
+        jButton2.setBackground(new java.awt.Color(69, 128, 162));
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Home");
+        jButton2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 30, -1, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 40, 60, 30));
 
         restoList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,12 +110,12 @@ public class ManageRestaurantsWorkArena extends javax.swing.JPanel {
         });
         add(restoList, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 440, 124, -1));
 
-        jLabel2.setFont(new java.awt.Font("Viner Hand ITC", 3, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("RESTAURANT");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 440, 130, -1));
 
-        jLabel3.setFont(new java.awt.Font("Viner Hand ITC", 3, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("USERNAME:");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 480, 130, -1));
@@ -119,19 +128,23 @@ public class ManageRestaurantsWorkArena extends javax.swing.JPanel {
         });
         add(txtUnamePwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 480, 124, -1));
 
-        jLabel4.setFont(new java.awt.Font("Viner Hand ITC", 3, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Serif", 3, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("PASSWORD:");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(423, 510, 110, -1));
         add(txtRestoUpdtPwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 510, 124, -1));
 
+        jButton3.setBackground(new java.awt.Color(93, 90, 107));
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Update");
+        jButton3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 560, -1, -1));
+        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(489, 553, 100, 30));
 
         bgdimg.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         bgdimg.setIcon(new javax.swing.ImageIcon("D:\\Study\\Northeastern University\\INFO 5100_AED\\Assignments\\Assignment Images\\Assignment 5\\Restaurant_-2_822x606.jpg")); // NOI18N
